@@ -582,7 +582,7 @@ AccountViewTransactions.propTypes = {
 };
 
 const reduxProps = ({ account }) => ({
-  transactions: account.transactions,
+  transactions: account.transactions.concat(account.uniqueTokensTransactions),
   fetchingTransactions: account.fetchingTransactions,
   accountAddress: account.accountAddress,
   account: account.accountInfo,
